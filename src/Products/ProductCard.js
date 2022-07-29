@@ -100,7 +100,16 @@ const ProductCard = ({ item }) => {
           <CardText></CardText>
           <div className="d-flex justify-content-between">
             <Button color="link" onClick={() => toggleFavourite()}>
-              <Heart color="red" fill="red" />
+              <Heart
+                color="red"
+                fill={
+                  store &&
+                  store.favourites.length &&
+                  !store.favourites.includes(item)
+                    ? "rgba(0,0,0,0)"
+                    : "red"
+                }
+              />
             </Button>
             <Button color="link" onClick={() => addToCart()}>
               <ShoppingCart className="text-secondary" />

@@ -66,9 +66,9 @@ API can be launched using npm run server.
 | Endpoint | Result |
 |------------------------------|-----------------------------------------------------|
 | /users | Lists all available users |
-| /products | Lists all available products |
+| KryptoAssessment/products | Lists all available products |
 | /orders | Lists all available orders  
-| /favourites | Lists all available favourites
+| KryptoAssessment/favourites | Lists all available favourites
 
 More info about API usage can be found at the [Postman Collection](https://www.getpostman.com/collections/9f28d57ae334429e1f1f)
 

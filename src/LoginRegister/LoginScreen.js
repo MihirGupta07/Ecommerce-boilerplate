@@ -31,7 +31,7 @@ const LoginScreen = ({ toggleTab }) => {
     )
       .then((response) => response.json())
       .catch((response) => toast.error(response))
-      .then(() => (window.location = "/products"));
+      .then(() => (window.location = "KryptoAssessment/products"));
   };
   return (
     <div>

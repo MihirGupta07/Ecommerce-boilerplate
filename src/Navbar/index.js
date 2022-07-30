@@ -10,7 +10,7 @@ const Navbar = () => {
   const [itemcount, setItemcount] = useState(0);
   const getProductData = () => {
     fetch(
-      "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/products/"
+      "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessmentKryptoAssessment/products/"
     )
       .then((response) => response.json())
       .catch((error) => console.error("Error:", error))
@@ -22,7 +22,7 @@ const Navbar = () => {
   };
   const getFavouritesData = () => {
     fetch(
-      "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/favourites/"
+      "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessmentKryptoAssessment/favourites/"
     )
       .then((response) => response.json())
       .catch((error) => console.error("Error:", error))
@@ -56,12 +56,22 @@ const Navbar = () => {
       <h3 className="text-white">ShopKart.</h3>
       <Nav style={{ float: "right", flex: 1 }} className="justify-content-end">
         <NavItem>
-          <NavLink tag={Link} to={"/products"} active className="text-white">
+          <NavLink
+            tag={Link}
+            to={"KryptoAssessment/products"}
+            active
+            className="text-white"
+          >
             Products
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink active tag={Link} to="/favourites" className="text-white">
+          <NavLink
+            active
+            tag={Link}
+            to="KryptoAssessment/favourites"
+            className="text-white"
+          >
             Favourites
           </NavLink>
         </NavItem>
@@ -71,7 +81,11 @@ const Navbar = () => {
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink tag={Link} to="/cart" className="text-white d-flex">
+          <NavLink
+            tag={Link}
+            to="KryptoAssessment/cart"
+            className="text-white d-flex"
+          >
             <ShoppingCart size={20} />
             <div
               style={{

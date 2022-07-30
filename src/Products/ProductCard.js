@@ -42,7 +42,7 @@ const ProductCard = ({ item }) => {
     } else {
       array.push(item);
       fetch(
-        "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/favourites/",
+        "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessmentKryptoAssessment/favourites/",
         {
           method: "POST",
           headers: {
@@ -71,7 +71,7 @@ const ProductCard = ({ item }) => {
           }}
           onClick={() => {
             dispatch(handleCurrentProduct(item));
-            navigate("/product");
+            navigate("KryptoAssessment/product");
           }}
           src={item.image}
         />
@@ -79,7 +79,7 @@ const ProductCard = ({ item }) => {
           <CardTitle
             onClick={() => {
               dispatch(handleCurrentProduct(item));
-              navigate("/product");
+              navigate("KryptoAssessment/product");
             }}
             tag="h6"
           >
@@ -90,7 +90,7 @@ const ProductCard = ({ item }) => {
             tag="h6"
             onClick={() => {
               dispatch(handleCurrentProduct(item));
-              navigate("/product");
+              navigate("KryptoAssessment/product");
             }}
           >
             ${item.amount}

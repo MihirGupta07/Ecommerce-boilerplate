@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Row } from "reactstrap";
-import Product from "../Products/Product";
-import ProductCard from "../Products/ProductCard";
+import Product from "..KryptoAssessment/products/Product";
+import ProductCard from "..KryptoAssessment/products/ProductCard";
 import { useSelector } from "react-redux";
 
 const Favourites = () => {

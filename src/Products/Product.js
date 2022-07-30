@@ -28,7 +28,7 @@ const Product = () => {
     } else {
       array.push(item);
       fetch(
-        "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/favourites/",
+        "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessmentKryptoAssessment/favourites/",
         {
           method: "POST",
           headers: {

@@ -1,3 +1,6 @@
+// Product Card Component
+
+//Misc Imports
 import React, { Fragment } from "react";
 import { useNavigate } from "react-router-dom";
 import {
@@ -19,10 +22,13 @@ import { Heart, ShoppingCart, Star } from "react-feather";
 import { useDispatch, useSelector } from "react-redux";
 import toast from "react-hot-toast";
 import Swal from "sweetalert2";
+
 const ProductCard = ({ item }) => {
   const dispatch = useDispatch();
   const store = useSelector((state) => state.store);
   const navigate = useNavigate();
+
+  //Handle Add to cart
   const addToCart = () => {
     dispatch(handleAddToCart(item.id));
     Swal.fire({
@@ -32,6 +38,7 @@ const ProductCard = ({ item }) => {
       timer: 1500,
     });
   };
+  //Handle Toggle Favourite
   const toggleFavourite = () => {
     const array = [...store.favourites];
     if (store.favourites.includes(item)) {
@@ -42,7 +49,7 @@ const ProductCard = ({ item }) => {
     } else {
       array.push(item);
       fetch(
-        "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessmentKryptoAssessment/favourites/",
+        "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/favourites/",
         {
           method: "POST",
           headers: {
@@ -52,7 +59,7 @@ const ProductCard = ({ item }) => {
         }
       )
         .then((response) => response.json())
-        .catch((error) => console.error("Error:", error));
+        .catch(() => {});
 
       toast.success("Added to Favourites", { position: "top-right" });
       dispatch(handleFetchFavourites(array));
@@ -71,7 +78,7 @@ const ProductCard = ({ item }) => {
           }}
           onClick={() => {
             dispatch(handleCurrentProduct(item));
-            navigate("KryptoAssessment/product");
+            navigate("product");
           }}
           src={item.image}
         />
@@ -79,7 +86,7 @@ const ProductCard = ({ item }) => {
           <CardTitle
             onClick={() => {
               dispatch(handleCurrentProduct(item));
-              navigate("KryptoAssessment/product");
+              navigate("product");
             }}
             tag="h6"
           >
@@ -90,7 +97,7 @@ const ProductCard = ({ item }) => {
             tag="h6"
             onClick={() => {
               dispatch(handleCurrentProduct(item));
-              navigate("KryptoAssessment/product");
+              navigate("product");
             }}
           >
             ${item.amount}
@@ -108,9 +115,9 @@ const ProductCard = ({ item }) => {
                 fill={
                   store &&
                   store.favourites.length &&
-                  !store.favourites.includes(item)
-                    ? "rgba(0,0,0,0)"
-                    : "red"
+                  store.favourites.includes(item)
+                    ? "red"
+                    : "rgba(0,0,0,0)"
                 }
               />
             </Button>

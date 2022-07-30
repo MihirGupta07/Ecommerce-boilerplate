@@ -1,24 +1,32 @@
+//Login tab
+
+//Misc imports
 import React, { useEffect, useState } from "react";
 import { Button, Col, FormFeedback, Input, Row } from "reactstrap";
+import { useNavigate } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
 import toast from "react-hot-toast";
 
 const LoginScreen = ({ toggleTab }) => {
+  const navigate = useNavigate();
   const defaultValues = {
     email: "",
     password: "",
   };
+
+  //React Hook form for Validation and handlilng form data
   const {
     control,
-    setError,
     handleSubmit,
     formState: { errors },
   } = useForm({ defaultValues });
+
   const onSubmit = (data) => {
     const payload = {};
     payload.email = data.email;
     payload.password = data.password;
 
+    //Post call for user signin
     fetch(
       "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/users/",
       {
@@ -31,7 +39,7 @@ const LoginScreen = ({ toggleTab }) => {
     )
       .then((response) => response.json())
       .catch((response) => toast.error(response))
-      .then(() => (window.location = "KryptoAssessment/products"));
+      .then(() => navigate("products"));
   };
   return (
     <div>

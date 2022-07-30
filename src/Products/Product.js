@@ -1,3 +1,6 @@
+// Product Details Screen
+
+// Misc Imports
 import React, { useEffect, useState } from "react";
 import { Heart, ShoppingCart } from "react-feather";
 import toast from "react-hot-toast";
@@ -7,8 +10,11 @@ import Swal from "sweetalert2";
 import { handleAddToCart, handleFetchFavourites } from "../store";
 
 const Product = () => {
+  //defining store and dispatch
   const store = useSelector((state) => state.store);
   const dispatch = useDispatch();
+
+  // Handle Add to cart
   const addToCart = () => {
     dispatch(handleAddToCart(item.id));
     Swal.fire({
@@ -18,6 +24,8 @@ const Product = () => {
       timer: 1500,
     });
   };
+
+  // Handle Toggle Favourite
   const toggleFavourite = () => {
     const array = [...store.favourites];
     if (store.favourites.includes(item)) {
@@ -27,8 +35,10 @@ const Product = () => {
       dispatch(handleFetchFavourites(array));
     } else {
       array.push(item);
+
+      //Post call to update Favourites
       fetch(
-        "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessmentKryptoAssessment/favourites/",
+        "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/favourites/",
         {
           method: "POST",
           headers: {
@@ -38,7 +48,7 @@ const Product = () => {
         }
       )
         .then((response) => response.json())
-        .catch((error) => console.error("Error:", error));
+        .catch(() => {});
 
       toast.success("Added to Favourites", { position: "top-right" });
       dispatch(handleFetchFavourites(array));

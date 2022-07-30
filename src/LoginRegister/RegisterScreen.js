@@ -1,8 +1,15 @@
+//Register Tab
+
+//Misc imports
 import React from "react";
 import { Button, Col, Input, Row } from "reactstrap";
 import { useForm, Controller } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 const RegisterScreen = ({ toggleTab }) => {
+  const navigate = useNavigate();
+
+  // React hook Form for form validation
   const defaultValues = {
     email: "",
     firstName: "",
@@ -16,6 +23,7 @@ const RegisterScreen = ({ toggleTab }) => {
     handleSubmit,
     formState: { errors },
   } = useForm({ defaultValues });
+
   const onSubmit = (data) => {
     const payload = {};
     payload.email = data.email;
@@ -23,6 +31,7 @@ const RegisterScreen = ({ toggleTab }) => {
     payload.firstName = data.firstName;
     payload.lastName = data.lastName;
 
+    // Post call for User Sign up
     fetch(
       "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/register/",
       {
@@ -35,7 +44,7 @@ const RegisterScreen = ({ toggleTab }) => {
     )
       .then((response) => response.json())
       .catch((response) => toast.error(response))
-      .then(() => (window.location = "KryptoAssessment/products"));
+      .then(() => navigate("product"));
   };
 
   return (

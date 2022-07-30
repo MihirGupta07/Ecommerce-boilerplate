@@ -1,17 +1,11 @@
+// Misc Imports
 import React, { useState } from "react";
 import LoginScreen from "./LoginScreen";
 import RegisterScreen from "./RegisterScreen";
-import {
-  Button,
-  Card,
-  CardBody,
-  Nav,
-  NavItem,
-  NavLink,
-  TabContent,
-  TabPane,
-} from "reactstrap";
+import { Card, CardBody, TabContent, TabPane } from "reactstrap";
+
 const LoginRegister = () => {
+  //States
   const [active, toggleTab] = useState("1");
 
   return (

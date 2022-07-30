@@ -1,3 +1,4 @@
+// Misc imports
 import React from "react";
 import { Delete, Trash, Trash2 } from "react-feather";
 import { useDispatch, useSelector } from "react-redux";
@@ -5,7 +6,6 @@ import { Button, Card, CardBody, CardImg, Col, Row } from "reactstrap";
 import { handleAdjustQuantity, handleRemoveFromCart } from "../store";
 
 const CartItem = ({ item }) => {
-  const store = useSelector((state) => state.store);
   const dispatch = useDispatch();
   return (
     <Card className="mb-2">
@@ -33,7 +33,7 @@ const CartItem = ({ item }) => {
                   dispatch(
                     handleAdjustQuantity({
                       id: item.id,
-                      quantity: item.quantity - 1,
+                      quantity: item.quantity - 1, // Decreasing the Quantity by 1
                     })
                   )
                 }
@@ -48,7 +48,7 @@ const CartItem = ({ item }) => {
                   dispatch(
                     handleAdjustQuantity({
                       id: item.id,
-                      quantity: item.quantity + 1,
+                      quantity: item.quantity + 1, // Increasing the Quantity by 1
                     })
                   )
                 }
@@ -61,7 +61,7 @@ const CartItem = ({ item }) => {
             <Button color="link">
               <Trash2
                 className="text-danger"
-                onClick={() => dispatch(handleRemoveFromCart(item.id))}
+                onClick={() => dispatch(handleRemoveFromCart(item.id))} // Removing the Item from cart
               />
             </Button>
           </Col>

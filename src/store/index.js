@@ -1,6 +1,7 @@
-// ** Redux Imports
+//  Redux Imports
 import { createSlice } from "@reduxjs/toolkit";
 
+//Store Reducer Slice
 export const storeSlice = createSlice({
   name: "store",
   initialState: {
@@ -10,12 +11,14 @@ export const storeSlice = createSlice({
     currentProduct: "",
   },
   reducers: {
+
+    // Reducer to add objects to cart
     handleAddToCart: (state, action) => {
       const item = state.products.find((prod) => prod.id === action.payload);
       const itemInCart = state.cartItems.find((item) =>
         item.id === action.payload ? true : false
       );
-      console.log(itemInCart);
+
       return {
         ...state,
         cartItems: itemInCart
@@ -27,12 +30,14 @@ export const storeSlice = createSlice({
           : [...state.cartItems, { ...item, quantity: 1 }],
       };
     },
+    // Reducer to Remove objects From cart
     handleRemoveFromCart: (state, action) => {
       return {
         ...state,
         cartItems: state.cartItems.filter((item) => item.id !== action.payload),
       };
     },
+    // Reducer to adjust quantity of objects in cart
     handleAdjustQuantity: (state, action) => {
       return {
         ...state,
@@ -44,14 +49,17 @@ export const storeSlice = createSlice({
       };
     },
 
+    // Reducer to Fetch all Products
     handleFetchProducts: (state, action) => {
       state.products = action.payload;
     },
 
+    // Reducer to Update Clicked Product
     handleCurrentProduct: (state, action) => {
       state.currentProduct = action.payload;
     },
 
+    // Reducer to Fetch all Favourites
     handleFetchFavourites: (state, action) => {
       state.favourites = action.payload;
     },

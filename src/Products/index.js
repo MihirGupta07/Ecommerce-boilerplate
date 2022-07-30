@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+// Misc Imports
+import React from "react";
 import { Col, Row } from "reactstrap";
-import Product from "./Product";
 import ProductCard from "./ProductCard";
 import { useSelector } from "react-redux";
 
@@ -19,10 +19,6 @@ const Products = () => {
             );
           })}
       </Row>
-
-      {/* {store.products && store.products.length && (
-        <Product item={store.products[2]} />
-      )} */}
     </div>
   );
 };

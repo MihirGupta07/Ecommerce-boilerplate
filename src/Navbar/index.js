@@ -1,3 +1,4 @@
+//Misc imports
 import React, { useEffect, useState } from "react";
 import { ShoppingCart } from "react-feather";
 import { Badge, Nav, NavItem, NavLink } from "reactstrap";
@@ -8,30 +9,32 @@ const Navbar = () => {
   const store = useSelector((state) => state.store);
   const dispatch = useDispatch();
   const [itemcount, setItemcount] = useState(0);
+
+  // Getting Product Details and filling up the store
   const getProductData = () => {
     fetch(
-      "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessmentKryptoAssessment/products/"
+      "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/products/"
     )
       .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
+      .catch(() => {})
       .then((response) => {
-        console.log({ response });
         dispatch(handleFetchProducts(response));
-        console.log("Success:", response);
       });
   };
+
+  // Getting Favourite Details and filling up the store
   const getFavouritesData = () => {
     fetch(
-      "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessmentKryptoAssessment/favourites/"
+      "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/favourites/"
     )
       .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
+      .catch(() => {})
       .then((response) => {
-        console.log({ response });
         dispatch(handleFetchFavourites(response));
-        console.log("Success:", response);
       });
   };
+
+  // Calculating items in cart whenever cart changes
   useEffect(() => {
     let count = 0;
     store.cartItems.map((item) => {
@@ -76,7 +79,7 @@ const Navbar = () => {
           </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/" className="text-white">
+          <NavLink tag={Link} to="KryptoAssessment/" className="text-white">
             Logout
           </NavLink>
         </NavItem>

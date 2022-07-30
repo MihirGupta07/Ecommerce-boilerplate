@@ -1,15 +1,21 @@
+// Misc React Imports
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Button, Card, CardBody, CardTitle, Col, Row } from "reactstrap";
 import CartItem from "./CartItem";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
+//  Constants
 const DISCOUNT = 100;
 const DELIVERY_CHARGES = 50;
+
 const Cart = () => {
-  const store = useSelector((state) => state.store);
+  const navigate = useNavigate(); // Navigation
+  const store = useSelector((state) => state.store); // Redux Store
   const [totalPrice, setTotalPrice] = useState(0);
 
+  // Calculating the total price when cart changes
   useEffect(() => {
     if (store.cartItems.length) {
       let amount = 0;
@@ -20,13 +26,13 @@ const Cart = () => {
     }
   }, [store.cartItems]);
 
-  const dispatch = useDispatch();
   const onPlaceOrder = () => {
+    // Constructing payload
     const payload = {};
-    // payload.orderId = Math.floor(Math.random() * 100);
     payload.cartItems = store.cartItems;
     payload.totalPrice = totalPrice - DISCOUNT + DELIVERY_CHARGES;
-    console.log(payload);
+
+    // Post Call for order placing
     fetch(
       "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/orders/",
       {
@@ -38,16 +44,15 @@ const Cart = () => {
       }
     )
       .then((response) => response.json())
-      .catch((error) => console.error("Error:", error))
+      .catch(() => {})
       .then(() => {
-        console.log("helo");
         Swal.fire({
           icon: "success",
           title: "Your Order has been placed!",
           showConfirmButton: false,
           timer: 1500,
         }).then(() => {
-          window.location = "/";
+          navigate("/product");
         });
       });
   };

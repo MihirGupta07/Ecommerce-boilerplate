@@ -31,15 +31,16 @@
 
 ### Product detail page
 
-<img width="675" alt="Screenshot 2022-07-24 at 10 53 17 AM" src="https://user-images.githubusercontent.com/52570524/180701655-7c3d3120-ff81-445a-81d9-b2152db8a776.png">
+<img width="675" alt="Screenshot 2022-07-24 at 10 53 17 AM" src="https://user-images.githubusercontent.com/62780056/181879873-bebf0b8a-5964-45dd-bd26-5b4f8acf93a7.png">
+<img width="675" alt="Screenshot 2022-07-24 at 10 53 17 AM" src="https://user-images.githubusercontent.com/62780056/181879896-258fd7dd-4ea7-4a9a-8829-53bfd996448b.png">
+<img width="675" alt="Screenshot 2022-07-24 at 10 53 17 AM" src="https://user-images.githubusercontent.com/62780056/181879915-576bc16b-9835-42a2-ac8e-56810ba34311.png">
+<img width="675" alt="Screenshot 2022-07-24 at 10 53 17 AM" src="https://user-images.githubusercontent.com/62780056/181879928-8df0f9da-c1a7-406b-a48f-59cccc00c7d6.png">
 
 ### Cart page
 
-<img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="https://user-images.githubusercontent.com/62780056/181879155-71beec2b-dc49-4a86-a7e6-67f6cc96e1f6.png">
+<img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="https://user-images.githubusercontent.com/62780056/181879821-29d4327d-c887-4b2f-99b4-62bd0a487cb7.png">
 
-<img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="https://user-images.githubusercontent.com/62780056/181879155-71beec2b-dc49-4a86-a7e6-67f6cc96e1f6.png">
-
-<img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="https://user-images.githubusercontent.com/62780056/181879155-71beec2b-dc49-4a86-a7e6-67f6cc96e1f6.png">
+<img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="https://user-images.githubusercontent.com/62780056/181879833-3b37e0d4-e635-40cc-8aca-3c31c4f91791.png">
 
 <img width="1472" alt="Screenshot 2022-07-24 at 10 51 16 AM" src="https://user-images.githubusercontent.com/62780056/181879139-33da41f8-02bd-4ffc-8cde-4ef075b61481.png">
 

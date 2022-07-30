@@ -15,7 +15,7 @@ function App() {
         <Route path="KryptoAssessment/products" element={<Products />} />
         <Route path="KryptoAssessment/favourites" element={<Favourites />} />
 
-        <Route path="KryptoAssessment/product" element={<Product />} />
+        <Route path="KryptoAssessment/products/product" element={<Product />} />
         <Route path="KryptoAssessment/cart" element={<Cart />} />
       </Routes>
     </div>

@@ -61,7 +61,16 @@ const CartItem = ({ item }) => {
             <Button color="link">
               <Trash2
                 className="text-danger"
-                onClick={() => dispatch(handleRemoveFromCart(item.id))} // Removing the Item from cart
+                onClick={() => {
+                  item.quantity > 1
+                    ? dispatch(
+                        handleAdjustQuantity({
+                          id: item.id,
+                          quantity: item.quantity - 1, // Reducing the Quantity by 1 if quantity is greater than 1
+                        })
+                      )
+                    : null;
+                }}
               />
             </Button>
           </Col>

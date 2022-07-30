@@ -62,7 +62,7 @@ const CartItem = ({ item }) => {
               <Trash2
                 className="text-danger"
                 onClick={() => {
-                  item.quantity > 1
+                  return item.quantity > 1
                     ? dispatch(
                         handleAdjustQuantity({
                           id: item.id,

@@ -22,7 +22,7 @@
 
 
 ### Home page
-<img width="1512" alt="Screenshot 2022-07-24 at 10 45 58 AM" src="https://user-images.githubusercontent.com/62780056/181879222-a17ace6c-d41d-48df-a529-939bbf985be1.png">
+<img width="1512" alt="Screenshot 2022-07-24 at 10 45 58 AM" src="https://user-images.githubusercontent.com/62780056/181879305-761784af-4115-432d-b5e5-c0704dd1349e.png">
 
 <img width="1512" alt="Screenshot 2022-07-24 at 10 45 58 AM" src="https://user-images.githubusercontent.com/62780056/181879222-a17ace6c-d41d-48df-a529-939bbf985be1.png">
 
@@ -34,9 +34,9 @@
 
 ### Cart page
 
-<img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="Screenshot (151)](https://user-images.githubusercontent.com/62780056/181879155-71beec2b-dc49-4a86-a7e6-67f6cc96e1f6.png">
+<img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="https://user-images.githubusercontent.com/62780056/181879155-71beec2b-dc49-4a86-a7e6-67f6cc96e1f6.png">
 
-<img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="Screenshot (151)](https://user-images.githubusercontent.com/62780056/181879155-71beec2b-dc49-4a86-a7e6-67f6cc96e1f6.png">
+<img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="https://user-images.githubusercontent.com/62780056/181879155-71beec2b-dc49-4a86-a7e6-67f6cc96e1f6.png">
 
 <img width="1415" alt="Screenshot 2022-07-24 at 10 50 18 AM" src="https://user-images.githubusercontent.com/62780056/181879155-71beec2b-dc49-4a86-a7e6-67f6cc96e1f6.png">
 

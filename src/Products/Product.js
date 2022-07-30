@@ -27,13 +27,16 @@ const Product = () => {
       dispatch(handleFetchFavourites(array));
     } else {
       array.push(item);
-      fetch("http://localhost:5000/favourites/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(item),
-      })
+      fetch(
+        "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/favourites/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(item),
+        }
+      )
         .then((response) => response.json())
         .catch((error) => console.error("Error:", error));
 

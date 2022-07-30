@@ -9,7 +9,9 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const [itemcount, setItemcount] = useState(0);
   const getProductData = () => {
-    fetch("http://localhost:5000/products/")
+    fetch(
+      "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/products/"
+    )
       .then((response) => response.json())
       .catch((error) => console.error("Error:", error))
       .then((response) => {
@@ -19,7 +21,9 @@ const Navbar = () => {
       });
   };
   const getFavouritesData = () => {
-    fetch("http://localhost:5000/favourites/")
+    fetch(
+      "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/favourites/"
+    )
       .then((response) => response.json())
       .catch((error) => console.error("Error:", error))
       .then((response) => {

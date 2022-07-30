@@ -23,13 +23,16 @@ const RegisterScreen = ({ toggleTab }) => {
     payload.firstName = data.firstName;
     payload.lastName = data.lastName;
 
-    fetch("http://localhost:5000/register/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
+    fetch(
+      "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/register/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      }
+    )
       .then((response) => response.json())
       .catch((response) => toast.error(response))
       .then(() => (window.location = "/products"));

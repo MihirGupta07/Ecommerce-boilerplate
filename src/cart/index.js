@@ -27,13 +27,16 @@ const Cart = () => {
     payload.cartItems = store.cartItems;
     payload.totalPrice = totalPrice - DISCOUNT + DELIVERY_CHARGES;
     console.log(payload);
-    fetch("http://localhost:5000/orders/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-    })
+    fetch(
+      "https://my-json-server.typicode.com/mihirgupta07/KryptoAssessment/orders/",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      }
+    )
       .then((response) => response.json())
       .catch((error) => console.error("Error:", error))
       .then(() => {

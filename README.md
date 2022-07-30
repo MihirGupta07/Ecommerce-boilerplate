@@ -18,6 +18,8 @@
 ### Login/Register page
 
 <img width="1512" alt="Screenshot 2022-07-24 at 10 44 13 AM" src="https://user-images.githubusercontent.com/52570524/180701451-5ccce009-0384-426c-b1bc-d7536fd7b142.png">
+![image](https://user-images.githubusercontent.com/62780056/181879115-74b2eb2d-0bc7-49fc-90fd-12f9497cc3db.png)
+
 
 ### Home page
 

@@ -15,8 +15,7 @@
 ### Login/Register page
 
 <img width="1512" alt="Screenshot 2022-07-24 at 10 44 13 AM" src="https://user-images.githubusercontent.com/62780056/181879505-19c452f1-d33b-4b8a-ac06-296710f22468.png">
-<img width="1512" alt="Screenshot 2022-07-24 at 10 44 13 AM" src="https://user-images.githubusercontent.com/62780056/181879511-02c38158-51be-4023-ace1-a3d21d2bc92f.png
-">
+<img width="1512" alt="Screenshot 2022-07-24 at 10 44 13 AM" src="https://user-images.githubusercontent.com/62780056/181879511-02c38158-51be-4023-ace1-a3d21d2bc92f.png">
 <img width="1512" alt="Screenshot 2022-07-24 at 10 44 13 AM" src="https://user-images.githubusercontent.com/62780056/181879519-51c209b7-29d3-45af-af20-82cc2ccb2c1c.png">
 
 

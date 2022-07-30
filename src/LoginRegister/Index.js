@@ -17,9 +17,19 @@ const LoginRegister = () => {
   return (
     <div
       className="d-flex align-items-center justify-content-center"
-      style={{ height: "90vh" }}
+      style={{ height: "100vh" }}
     >
       <Card style={{ minHeight: "300px", width: "500px" }}>
+        <h2
+          className="d-flex align-items-center justify-content-start text-white"
+          style={{
+            paddingInline: "40px",
+            backgroundColor: "#0376ed",
+            height: "10vh",
+          }}
+        >
+          Shopkart.
+        </h2>
         <CardBody>
           <TabContent activeTab={active}>
             <TabPane tabId="1">

@@ -9,7 +9,7 @@ import Cart from "./cart";
 function App() {
   return (
     <div style={{ backgroundColor: "#e5edf6" }}>
-      <Navbar />
+      {window.location.href !== "http://localhost:3000/" && <Navbar />}
       <Routes>
         <Route path="/" element={<LoginRegister />} />
         <Route path="products" element={<Products />} />

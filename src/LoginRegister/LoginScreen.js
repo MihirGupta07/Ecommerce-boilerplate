@@ -32,7 +32,7 @@ const LoginScreen = ({ toggleTab }) => {
   };
   return (
     <div>
-      <h2 className="m-4">Login</h2>
+      <h2 className="mx-4 mb-4">Login</h2>
       <Row className="m-3">
         <Col>
           <Controller
@@ -83,9 +83,11 @@ const LoginScreen = ({ toggleTab }) => {
       </Row>
       <Row className="m-3">
         <Col>
-          <small onClick={() => toggleTab("2")} className="text-primary">
-            New User? Create an Account
-          </small>
+          <Button color="link" className="p-0" outline>
+            <small onClick={() => toggleTab("2")} className="text-primary">
+              New User? Create an Account
+            </small>
+          </Button>
         </Col>
         <Col>
           <Button

@@ -37,7 +37,7 @@ const RegisterScreen = ({ toggleTab }) => {
 
   return (
     <div>
-      <h2 className="m-4">Register</h2>
+      <h2 className="mx-4  mb-4">Register</h2>
       <Row className="m-3">
         <Col>
           <Controller
@@ -167,9 +167,11 @@ const RegisterScreen = ({ toggleTab }) => {
 
       <Row className="m-3">
         <Col>
-          <small onClick={() => toggleTab("1")} className="text-primary">
-            Existing User? Sign in
-          </small>
+          <Button color="link" outline>
+            <small onClick={() => toggleTab("1")} className="text-primary">
+              Existing User? Sign in
+            </small>
+          </Button>
         </Col>
         <Col>
           <Button
